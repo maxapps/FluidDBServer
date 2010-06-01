@@ -1,0 +1,37 @@
+FluidDBServer
+=============
+Adobe AIR specific AS3 library for communicating with the fantastic FluidDB API
+(http://www.fluidinfo.com/fluiddb).
+
+Unfortunately, AIR is required because of a need to to set specific request 
+headers and to view response headers. I could find no straight forward way of 
+doing this from vanilla flash. The JS libraries manage it by utilizing jQuery. 
+An inspection of which would probably lead to a valid method.
+
+
+Dependencies
+============
+Requires the as3corelib library for easily encoding/decoding JSON 
+(http://code.google.com/p/as3corelib/).
+
+
+Usage
+=====
+Include the library source code in your project's libs folder or include the 
+compiled .swc in your project's Flex Build Path.
+
+
+Notes
+=====
+This library implements the entire FluidDB API as of version 20100109. I will 
+try to keep it updated as the FluidDB API matures but there are no guarantees. 
+
+
+ToDo
+====
+I plan to add some additional helper methods for things like automatically 
+creating tags if they don't already exist when tagging an object, etc.
+
+A complete working example of using the library is coming soon. The one I used 
+for testing is far too ugly to release.
+
