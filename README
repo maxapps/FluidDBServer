@@ -9,6 +9,20 @@ doing this from vanilla flash. The JS libraries manage it by utilizing jQuery.
 An inspection of which would probably lead to a valid method.
 
 
+Changes
+=======
+June 22, 2010	-	Minor changes to autodoc remarks.
+							- Added FluidDBExplorer for experimentation and demos.
+
+
+FluidDBExplorer
+===============
+An AIR application for demonstrating the use of this library or for just 
+exploring use of the FluidDB API is now available from the Downloads page. 
+Installation is the same as for any AIR application. After installation, 
+run the app then view information available on the "Getting Started" tab.
+
+
 Dependencies
 ============
 Requires the as3corelib library for easily encoding/decoding JSON 
@@ -29,9 +43,5 @@ try to keep it updated as the FluidDB API matures but there are no guarantees.
 
 ToDo
 ====
-I plan to add some additional helper methods for things like automatically 
-creating tags if they don't already exist when tagging an object, etc.
-
-A complete working example of using the library is coming soon. The one I used 
-for testing is far too ugly to release.
-
+I still plan to add some additional helper methods for things like 
+automatically creating tags if they don't already exist when tagging an object.

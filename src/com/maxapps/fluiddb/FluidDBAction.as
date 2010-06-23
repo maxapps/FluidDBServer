@@ -112,7 +112,7 @@ package com.maxapps.fluiddb {
 		
 		/**
 		 * Raw response data returned by the API call. Not all API calls return any data.
-		 * In this version of the API, most calls do which return data do so as a JSON formatted string.
+		 * In this version of the API, most calls which return data do so as a JSON formatted string.
 		 * 
 		 * The FluidDBService's decodeResponse() method can be used to convert the data to an object.
 		 * 

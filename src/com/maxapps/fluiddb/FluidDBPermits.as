@@ -52,6 +52,7 @@ package com.maxapps.fluiddb {
 		
 		
 		// Action lists for Policies
+		public static const POLICY_ACTIONS_ALL:Array		= ACTIONS_ALL.slice(1);
 		public static const POLICY_ACTIONS_NS:Array			= ACTIONS_NS.slice(1);
 		public static const POLICY_ACTIONS_TAG:Array		= ACTIONS_TAG.slice(1);
 		public static const POLICY_ACTIONS_VALUE:Array	= ACTIONS_VALUE.slice(1);

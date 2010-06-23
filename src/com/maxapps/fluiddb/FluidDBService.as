@@ -44,7 +44,7 @@ package com.maxapps.fluiddb {
 	 * asynchronous and the appropriate event is fired as needed.
 	 * 
 	 * @example
-	 * 		private svcDB:FluidDBService;
+	 * 		private var svcDB:FluidDBService;
 	 * 		
 	 * 		// The creationComplete event handler for the application.
 	 * 		private function creationComplete():void {
@@ -373,7 +373,7 @@ package com.maxapps.fluiddb {
 		 * Note that this method creates a tag itself, NOT the value of a tag on a particular object 
 		 * (for that, use createObjectTag() or tagObject().
 		 * 
-		 * @param	sPath		Path to create tag on..
+		 * @param	sPath		Path to create tag on.
 		 * @param	sName		Name of tag to create.
 		 * @param	sDesc		Description of the new tag.
 		 * @param	fIndex	[false] Optional parameter indicating whether the tag should be indexed.
@@ -406,6 +406,8 @@ package com.maxapps.fluiddb {
 		 * 
 		 * Currently, the FluidDB API only returns responses as JSON formatted strings. This function 
 		 * provides for future expansion to additional formats.
+		 * 
+		 * @param	vResponse		Response from call to FluidDB API.
 		 * 
 		 * @return	Returns the response converted to the type of data specfied by the 
 		 * 					contentType property (at the moment, only JSON is supported by the API).
@@ -518,7 +520,7 @@ package com.maxapps.fluiddb {
 		 * 
 		 * @return	API returns:
 		 * 						exceptions	The names of users who are exceptions to the policy.
-		 * 						policy				The policy (either 'open' or 'closed').
+		 * 						policy			The policy (either 'open' or 'closed').
 		 * 
 		 * @see	setNamespacePermits()
 		 * @see	http://doc.fluidinfo.com/fluidDB/permissions.html
@@ -657,7 +659,7 @@ package com.maxapps.fluiddb {
 		 * getTagValuePolicy() which eliminate the need to specify the category.
 		 * 
 		 * @param	sUser				User to get policy for.
-		 * @param	sCategory		Category to set policy for (namespaces|tags|tag-values).
+		 * @param	sCategory		Category to get policy for (namespaces|tags|tag-values).
 		 * @param	sAction			Action to get policy for. Actions vary by category as follows:
 		 * 											For namespaces:	create|update|delete|list
 		 * 											For tags:				update|delete
@@ -863,8 +865,6 @@ package com.maxapps.fluiddb {
 			
 			mdlAct = new FluidDBAction("queryForObject", DB_OBJECTS, METHOD_GET, fncCB);
 			callAPI(mdlAct, {query:sQry});
-			// http://sandbox.fluidinfo.com/objects/?{"query":"has test/jcarversandbox/Test01/Started"}
-
 		}
 		
 		
@@ -873,8 +873,8 @@ package com.maxapps.fluiddb {
 		 * the API attempts the request as the anonymous user. This method needs to be called BEFORE 
 		 * any methods which access the API.
 		 * 
-		 * @param	sUser		The username selected when FluidDB account was created.
-		 * @param	sPW			The password for the account indicated by the username.
+		 * @param	sUser		[''] The username selected when FluidDB account was created.
+		 * @param	sPW			[''] The password for the account indicated by the username.
 		 * 
 		 * <b>Note: </b> Setting either the username or password to an empty string results in 
 		 * credentials for an anonynous user.
@@ -1184,6 +1184,8 @@ package com.maxapps.fluiddb {
 		 * @param	fncCB		[null] Optional callback function. If provided, the function must accept 
 		 * 								an instance of FluidDBAction.
 		 * 
+		 * @return	API returns no data.
+		 *
 		 * @see createObjectTag()
 		 * @see createOpaqueObjectTag()
 		 * @see	tagObject()
